@@ -69,7 +69,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class='bg-gradient-to-br from-cyan-500 via-indigo-300 to-blue-500 w-screen h-screen p-20'>\n  <app-tweet>Text</app-tweet>\n  <app-tweet>Text</app-tweet>\n  <app-tweet>Text</app-tweet>\n</div>\n\n<router-outlet></router-outlet>\n"
+            "templateData": "<div class='bg-gradient-to-br from-cyan-500 via-indigo-300 to-blue-500 w-screen h-screen p-20 animate-gradient-x'>\n  <app-tweet>Text</app-tweet>\n  <app-tweet>Text</app-tweet>\n  <app-tweet>Text</app-tweet>\n</div>\n\n<router-outlet></router-outlet>\n"
         },
         {
             "name": "ButtonComponent",
