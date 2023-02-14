@@ -1,0 +1,9 @@
+<app-tweet
+  *ngFor='let tweet of tweets'
+  [name]='tweet.name'
+  [avatar]='tweet.avatar'
+  [date]='tweet.date'
+  [handle]='tweet.handle'
+>
+  {{tweet.text}}
+</app-tweet>
