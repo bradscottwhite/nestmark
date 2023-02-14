@@ -69,7 +69,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class='bg-gradient-to-br from-cyan-500 via-indigo-300 to-blue-500 w-screen h-screen p-20 animate-gradient-x'>\n  <app-tweet>Text</app-tweet>\n  <app-tweet>Text</app-tweet>\n  <app-tweet>Text</app-tweet>\n</div>\n\n<router-outlet></router-outlet>\n"
+            "templateData": "<div class='fixed bg-gradient-to-br from-cyan-500 via-indigo-300 to-blue-500 w-screen h-screen animate-gradient-x'></div>\n\n<div class='py-12 grid justify-center'>\n  <!-- Tweets -->\n  <!--<div class=\"my-auto max-h-screen-xl px-4 py-16 sm:px-6 lg:px-8\">-->\n    <app-tweet name='John Smith' avatar='https://images.unsplash.com/photo-1508280756091-9bdd7ef1f463?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80' handle='@johnsmith0345' date='Apr 12, 2022'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores deserunt ea doloremque natus error, rerum quas odio quaerat nam ex commodi hic, suscipit in a veritatis pariatur minus consequuntur!</app-tweet>\n    <app-tweet name='John Smith' avatar='https://images.unsplash.com/photo-1508280756091-9bdd7ef1f463?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80' handle='@johnsmith0345' date='Apr 12, 2022'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores deserunt ea doloremque natus error, rerum quas odio quaerat nam ex commodi hic, suscipit in a veritatis pariatur minus consequuntur!</app-tweet>\n    <app-tweet name='John Smith' avatar='https://images.unsplash.com/photo-1508280756091-9bdd7ef1f463?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80' handle='@johnsmith0345' date='Apr 12, 2022'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores deserunt ea doloremque natus error, rerum quas odio quaerat nam ex commodi hic, suscipit in a veritatis pariatur minus consequuntur!</app-tweet>\n    <app-tweet name='John Smith' avatar='https://images.unsplash.com/photo-1508280756091-9bdd7ef1f463?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80' handle='@johnsmith0345' date='Apr 12, 2022'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores deserunt ea doloremque natus error, rerum quas odio quaerat nam ex commodi hic, suscipit in a veritatis pariatur minus consequuntur!</app-tweet>\n    <app-tweet name='John Smith' avatar='https://images.unsplash.com/photo-1508280756091-9bdd7ef1f463?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80' handle='@johnsmith0345' date='Apr 12, 2022'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores deserunt ea doloremque natus error, rerum quas odio quaerat nam ex commodi hic, suscipit in a veritatis pariatur minus consequuntur!</app-tweet>\n</div>\n\n<router-outlet></router-outlet>\n"
         },
         {
             "name": "ButtonComponent",
@@ -350,7 +350,7 @@
         },
         {
             "name": "TweetComponent",
-            "id": "component-TweetComponent-55ab028640c4c0d71c816bb4298500e5e2d9baab0794c973a5dbc43a39fc166aa1e3ff9683fbd06620777b884377962bdc9f773ae4630664a837320746692829",
+            "id": "component-TweetComponent-fe6664f8fdfc091262e868e9b9995be0ae4f27e45a581f1ab447a499f6c16a1d4aa3d7fdd58bafa3be991311bd0ead90e3e57f36c9865a99d487c9f06a6aeadc",
             "file": "src/app/tweet/tweet.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -366,7 +366,40 @@
                 "./tweet.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "avatar",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "date",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "handle",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
             "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [],
@@ -377,7 +410,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-tweet',\n  templateUrl: './tweet.component.html',\n  styleUrls: ['./tweet.component.css']\n})\nexport class TweetComponent {\n\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-tweet',\n  templateUrl: './tweet.component.html',\n  styleUrls: ['./tweet.component.css']\n})\nexport class TweetComponent {\n  @Input() name?: string;\n  @Input() date?: string;\n  @Input() avatar?: string;\n  @Input() handle?: string;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -386,7 +419,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class='relative block backdrop-filter backdrop-blur-lg bg-white/20 overflow-hidden rounded-lg border border-slate-100/20\n  p-8 mx-10 my-10'>\n  <div class='mt-4 sm:pr-8'>\n    <h2 class='text-xl font-bold'>Title</h2>\n    <p class='text-sm'>\n      <ng-content></ng-content>\n    </p>\n  </div>\n</div>\n"
+            "templateData": "<div class='w-full max-w-md px-8 py-4 mt-16 shadow-lg dark:bg-gray-800/20 backdrop-filter backdrop-blur-lg bg-white/20 rounded-lg border border-slate-100/20'>\n\n  <div class=\"flex justify-center -mt-16 md:justify-end\">\n    <img\n      alt=\"{{handle}}\"\n      src=\"{{avatar}}\"\n      class=\"object-cover w-20 h-20 border-2 border-blue-500 rounded-full dark:border-blue-400\"\n    />\n  </div>\n\n  <h2 class='mt-2 text-xl font-semibold text-white dark:text-white md:mt-0'>{{name}} <span class='text-slate-300'>. {{date}}</span></h2>\n\n  <p class=\"relative mt-4 text-gray-500 text-base width-auto font-medium text-white flex-shrink\">\n    <ng-content></ng-content>\n  </p>\n  \n  <div class=\"flex justify-end mt-4\">\n    <a href=\"#\" class=\"text-lg font-medium text-blue-600 dark:text-blue-300\" tabindex=\"0\" role=\"link\">{{handle}}</a>\n  </div>\n\n</div>\n"
         }
     ],
     "modules": [
@@ -791,7 +824,7 @@
                 "linktype": "component",
                 "name": "TweetComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/1",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {

@@ -7,15 +7,30 @@ export default {
   argTypes: {}
 } as Meta;
 
-const Template: Story<Tweet> = (args: Tweet) => ({
+const Template: Story<Tweet | { ngContent: unknown }> = (args: Tweet | { ngContent: unknown }) => ({
   props: args,
   template: `
-    <app-tweet >
-      This is a template test.
-    </app-tweet>`,
+    <div class='bg-blue-300 w-screen h-screen absolute top-0 left-0'>
+      <app-tweet
+        [avatar]='avatar'
+        [name]='name'
+        [date]='date'
+        [handle]='handle'
+      >
+        {{ngContent}}
+      </app-tweet>
+    </div>`,
 });
 
 export const Example = Template.bind({});
+
+Example.args = {
+  name: 'John Smith',
+  avatar: 'https://images.unsplash.com/photo-1508280756091-9bdd7ef1f463?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80',
+  handle: '@johnsmith0345',
+  date: 'Apr 12, 2022',
+  ngContent: 'This is a template test.'
+};
 
 /*export const Primary = Template.bind({});
 Primary.args = {
