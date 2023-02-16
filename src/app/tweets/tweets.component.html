@@ -1,5 +1,5 @@
 <app-tweet
-  *ngFor='let tweet of tweets'
+  *ngFor='let tweet of tweets | async'
   [name]='tweet.name'
   [avatar]='tweet.avatar'
   [date]='tweet.date'
